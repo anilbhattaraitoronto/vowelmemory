@@ -13,6 +13,14 @@
         <section id="vowel-board">
 
         </section> 
-        <script src="main.js" ></script>    
+        <footer>
+            <p>&copy; Anil Bhattarai 2020 - <span id="copy-right-year"></span></p>
+        </footer>
+        <script src="main.js" ></script>
+        <script>
+            let copyRightYearContainer = document.getElementById('copy-right-year')
+            let year = new Date().getFullYear()
+            copyRightYearContainer.innerHTML = year
+        </script>   
     </body>
 
