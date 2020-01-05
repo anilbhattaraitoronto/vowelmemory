@@ -29,12 +29,15 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+//immediately invoked function
+
 (function shuffleCards() {
     let random_array = new Array(24).fill().map((a, i) => a = i).sort(() => Math.random() - 0.5)
     cards.forEach((card, index) => {
         card.style.order = random_array[index]
     })
 })()
+
 
 // shuffleCards()
 
@@ -50,8 +53,6 @@ function flipCard() {
     }
 
     secondCard = this.firstElementChild
-
-
 
     checkMatch()
 }
@@ -82,7 +83,6 @@ function unFlipCards() {
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false]
     [firstCard, secondCard] = [null, null]
-    console.log('board-reset')
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard))

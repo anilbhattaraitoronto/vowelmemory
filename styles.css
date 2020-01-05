@@ -12,12 +12,14 @@ button{
 
 body{
     width: 100%;
-    max-width: 1200px;
+    max-width: 320px;
     margin: auto;
 }
 #masthead{
     text-align: center;
-    padding: 10px 0;
+    font-size: 1.5em;
+    color: darkblue;
+    padding: 5px 0;
 }
 #reset{
     cursor: pointer;
@@ -41,61 +43,43 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    position: relative;
+    /* position: relative; */
    
 }
 .vowel-card{
     cursor: pointer;
-    margin: 10px;
-    background-color:lightblue;
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+    background-color:crimson;
     border-radius: 4px;
     position: relative;
+    border: 1px solid darkblue;
 }
 
-.animate-characters{
-    animation: layCards 2s 1s steps(20, end) infinite alternate-reverse;
-}
 
-@keyframes layCards {
-    from { width: 0;}
-    to { width: 100%}
-
-}
-.vowel,
-.click{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: white;
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 20px;
-}
 .vowel{
-    height: 100px;
-    width: 100px;
-    background: crimson;
+    border-radius: 4px;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    border: 1px solid white;
     visibility: hidden;
     cursor: pointer;
+    padding-top: 16px;
+    transition: 400ms all;
+    
 }
 .vowel.flip{
+    transition: 400ms all;
     visibility: visible;
 }
-.click{
-    color: crimson;
-    border: 1px solid crimson;
-    cursor: pointer;
-    transition: 400ms all;
-    height: 30px;
-    width: 100px;
-}
+
 .vowel-card:hover{
-    background: rgba(220, 20, 60, 0.596);
-    color: white;
-    border-color: white;
+    background: rgb(5, 64, 141);
+    
 }
 
 footer{
