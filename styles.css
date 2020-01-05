@@ -66,15 +66,15 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    visibility: hidden;
+    opacity: 0;
     cursor: pointer;
     padding-top: 16px;
-    transition: 400ms all;
+    transition: 600ms all;
     
 }
 .vowel.flip{
     transition: 400ms all;
-    visibility: visible;
+    opacity: 1;
 }
 
 .vowel-card:hover{
